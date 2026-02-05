@@ -37,12 +37,11 @@ const formSchema = z.object({
   }),
   age: z.coerce
     .number({ invalid_type_error: "La edad debe ser un número." })
-    .min(1, "La edad debe ser un número positivo.")
-    .max(120, "La edad parece demasiado alta."),
+    .min(18, "Debes tener al menos 18 años."), // Mínimo 18, sin máximo (.max eliminado)
   packs: z.coerce
     .number({ invalid_type_error: "El valor debe ser un número." })
     .min(0, "Los paquetes no pueden ser negativos.")
-    .max(200, "Este es un número muy alto."),
+    .max(150, "El valor máximo permitido es 150 paquetes-año."), // Máximo ajustado a 150
 });
 
 export type RiskFormValues = z.infer<typeof formSchema>;
