@@ -35,14 +35,14 @@ export default function RiskResultDialog({
   if (riskScore > 7) {
     title = "Riesgo Alto Detectado";
     description =
-      "Se recomienda encarecidamente una consulta urgente con un especialista y la realización de pruebas específicas como una Tomografía Computarizada (TC) de baja dosis y análisis de marcadores tumorales.";
+      "Su perfil de riesgo general es alto. Se recomienda completar estudio con cistoscopia y uroTC.";
     Icon = ShieldAlert;
     iconColor = "text-destructive";
     titleColor = "text-destructive";
   } else if (riskScore < 7) {
     title = "Perfil de Bajo Riesgo";
     description =
-      "Su perfil de riesgo general es bajo. Para una evaluación completa, se sugieren diferentes pruebas preventivas como un análisis de sangre general y una consulta de seguimiento con su médico.";
+      "Su perfil de riesgo general es bajo. Valorar completar estudio con ecografía abdominal.";
     Icon = ShieldCheck;
     iconColor = "text-accent";
     titleColor = "text-foreground";
