@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -41,6 +42,9 @@ export default function Home() {
 
       <footer className="p-4 text-center text-muted-foreground text-sm">
         <p>Desarrollado por Daniel Santos Olmo Montoya</p>
+        <p className="mt-2">
+          Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
+        </p>
       </footer>
 
       <RiskResultDialog
