@@ -9,13 +9,16 @@ export default function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleCalculateRisk = (data: RiskFormValues) => {
-    // Artificial delay to show loading state
     return new Promise<void>((resolve) => {
       setTimeout(() => {
         const { age, packs, sex } = data;
-        // Formula: score = (age - 45) * 0.3 + packs * 0.4 + (sex === 'male' ? 3 : -3)
-        const score = (age - 45) * 0.3 + packs * 0.4 + (sex === "male" ? 3 : -3);
-        setRiskScore(score);
+
+        const sexValue = sex === "male" ? 1 : 0;
+        const A =
+          -7.4071 + 0.0729 * age + 0.7788 * sexValue + 0.0124 * packs;
+        const probability = 1 / (1 + Math.exp(-A));
+
+        setRiskScore(probability * 100);
         setIsDialogOpen(true);
         resolve();
       }, 1500);

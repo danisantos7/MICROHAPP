@@ -58,6 +58,12 @@ export default function RiskResultDialog({
           <AlertDialogTitle className={cn("text-2xl text-center font-headline", titleColor)}>
             {title}
           </AlertDialogTitle>
+          <div className="text-center py-2">
+            <p className="text-sm text-muted-foreground">Probabilidad de Tumor</p>
+            <p className={cn("text-4xl font-bold", iconColor)}>
+              {riskScore.toFixed(2)}%
+            </p>
+          </div>
           <AlertDialogDescription className="text-center pt-2 text-base">
             {description}
           </AlertDialogDescription>
