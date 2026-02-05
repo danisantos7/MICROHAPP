@@ -114,7 +114,6 @@ export default function RiskForm({ onCalculate }: RiskFormProps) {
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="e.g., 45"
                       {...field}
                       disabled={isSubmitting}
                     />
@@ -132,7 +131,6 @@ export default function RiskForm({ onCalculate }: RiskFormProps) {
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="e.g., 10"
                       {...field}
                       disabled={isSubmitting}
                     />
