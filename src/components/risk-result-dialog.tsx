@@ -39,7 +39,7 @@ export default function RiskResultDialog({
     Icon = ShieldAlert;
     iconColor = "text-destructive";
     titleColor = "text-destructive";
-  } else if (riskScore < -7) {
+  } else if (riskScore < 7) {
     title = "Perfil de Bajo Riesgo";
     description =
       "Su perfil de riesgo general es bajo. Para una evaluación completa, se sugieren diferentes pruebas preventivas como un análisis de sangre general y una consulta de seguimiento con su médico.";
@@ -61,8 +61,7 @@ export default function RiskResultDialog({
           <div className="text-center py-2">
             <p className="text-sm text-muted-foreground">Probabilidad de Tumor</p>
             <p className={cn("text-4xl font-bold", iconColor)}>
-              {riskScore.toFixed(2)}%
-            </p>
+            {riskScore !== null ? `${riskScore.toFixed(0)}%` : "-- %"}            </p>
           </div>
           <AlertDialogDescription className="text-center pt-2 text-base">
             {description}
