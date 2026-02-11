@@ -46,7 +46,7 @@ export default function Home() {
 
       <footer className="p-4 text-center text-muted-foreground text-sm">
         <p className="mb-2 text-foreground/80">
-          Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
+          Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso. Servicio de urología (Hospital de San Juan)
         </p>
         <p>Desarrollado por Daniel Santos Olmo Montoya</p>
       </footer>
