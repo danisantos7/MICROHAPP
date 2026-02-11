@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "app-logo",
+      "description": "The main logo for the MICROHAPP application.",
+      "imageUrl": "https://picsum.photos/seed/microhapp-logo/40/40",
+      "imageHint": "medical logo"
+    }
+  ]
+}

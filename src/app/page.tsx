@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import RiskForm, { type RiskFormValues } from "@/components/risk-form";
 import RiskResultDialog from "@/components/risk-result-dialog";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
   const [riskScore, setRiskScore] = useState<number | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const logo = PlaceHolderImages.find((image) => image.id === "app-logo");
 
   const handleCalculateRisk = (data: RiskFormValues) => {
     return new Promise<void>((resolve) => {
@@ -28,9 +32,21 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <header className="p-4 shadow-md bg-card sticky top-0 z-10">
-        <h1 className="text-3xl font-bold text-primary text-center font-headline">
-          MICROHAPP
-        </h1>
+        <div className="flex items-center justify-center gap-3">
+          {logo && (
+            <Image
+              src={logo.imageUrl}
+              alt={logo.description}
+              width={40}
+              height={40}
+              data-ai-hint={logo.imageHint}
+              className="rounded-full"
+            />
+          )}
+          <h1 className="text-3xl font-bold text-primary font-headline">
+            MICROHAPP
+          </h1>
+        </div>
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
