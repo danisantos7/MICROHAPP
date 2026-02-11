@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import RiskForm, { type RiskFormValues } from "@/components/risk-form";
 import RiskResultDialog from "@/components/risk-result-dialog";
+import creditosImg from "./creditoshospital.jpeg";
 
 export default function Home() {
   const [riskScore, setRiskScore] = useState<number | null>(null);
@@ -60,10 +61,9 @@ export default function Home() {
           Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
         </p>
         <Image
-            src="/creditoshospital.jpeg"
+            src={creditosImg}
             alt="Créditos del hospital"
-            width={70}
-            height={70}
+            width={250}
             data-ai-hint="hospital logo"
             className="rounded-full"
           />
