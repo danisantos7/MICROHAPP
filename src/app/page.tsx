@@ -4,6 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import RiskForm, { type RiskFormValues } from "@/components/risk-form";
 import RiskResultDialog from "@/components/risk-result-dialog";
+import placeholderData from "@/app/lib/placeholder-images.json";
+
+const appLogo = placeholderData.placeholderImages.find(
+  (img) => img.id === "app-logo"
+);
+const hospitalLogo = placeholderData.placeholderImages.find(
+  (img) => img.id === "hospital-credits-logo"
+);
 
 export default function Home() {
   const [riskScore, setRiskScore] = useState<number | null>(null);
@@ -30,14 +38,18 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <header className="p-4 shadow-md bg-card sticky top-0 z-10">
         <div className="flex items-center justify-center gap-3">
-          <Image
-            src="/icon.png"
-            alt="App Logo"
-            width={70}
-            height={70}
-            data-ai-hint="medical logo"
-            className="rounded-full"
-          />
+          {appLogo ? (
+            <Image
+              src={appLogo.imageUrl}
+              alt={appLogo.description}
+              width={70}
+              height={70}
+              data-ai-hint={appLogo.imageHint}
+              className="rounded-full"
+            />
+          ) : (
+            <div className="w-[70px] h-[70px] bg-muted rounded-full" />
+          )}
           <h1 className="text-3xl font-bold text-primary font-headline">
             MICROHAPP
           </h1>
@@ -59,14 +71,18 @@ export default function Home() {
         <p className="mb-4 max-w-lg text-foreground/80">
           Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
         </p>
-        <Image
-            src="/creditoshospital.jpeg"
-            alt="Créditos del hospital"
-            width={70}
-            height={70}
-            data-ai-hint="hospital logo"
-            className="rounded-full"
-          />
+        {hospitalLogo ? (
+            <Image
+              src={hospitalLogo.imageUrl}
+              alt={hospitalLogo.description}
+              width={70}
+              height={70}
+              data-ai-hint={hospitalLogo.imageHint}
+              className="rounded-full"
+            />
+          ) : (
+             <div className="w-[70px] h-[70px] bg-muted rounded-full" />
+        )}
         <p className="mt-4">Desarrollado por Daniel Santos Olmo Montoya</p>
       </footer>
 

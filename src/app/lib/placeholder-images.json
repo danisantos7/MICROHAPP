@@ -3,8 +3,14 @@
     {
       "id": "app-logo",
       "description": "The main logo for the MICROHAPP application.",
-      "imageUrl": "https://picsum.photos/seed/microhapp-logo/40/40",
+      "imageUrl": "https://picsum.photos/seed/app-icon/70/70",
       "imageHint": "medical logo"
+    },
+    {
+      "id": "hospital-credits-logo",
+      "description": "The logo for the hospital credits in the footer.",
+      "imageUrl": "https://picsum.photos/seed/hospital-credits/70/70",
+      "imageHint": "hospital logo"
     }
   ]
 }
