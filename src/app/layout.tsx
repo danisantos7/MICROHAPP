@@ -5,6 +5,9 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'MICROHAPP',
   description: 'Calculadora de Riesgo de Tumor',
+  icons: {
+    icon: "/icono-microhapp.png",
+  },
 };
 
 export default function RootLayout({
