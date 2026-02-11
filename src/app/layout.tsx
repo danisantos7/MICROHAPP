@@ -5,6 +5,15 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'MICROHAPP',
   description: 'Calculadora de Riesgo de Tumor',
+  icons: {
+    icon: '/icon.png',            
+    shortcut: '/icon.png',            
+    apple: '/apple-touch-icon.png',   
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon.png',
+    },
+  },
 };
 
 export default function RootLayout({
