@@ -31,10 +31,10 @@ export default function Home() {
       <header className="p-4 shadow-md bg-card sticky top-0 z-10">
         <div className="flex items-center justify-center gap-3">
           <Image
-            src="https://picsum.photos/seed/app-logo/40/40"
+            src="/icon.png"
             alt="App Logo"
-            width={40}
-            height={40}
+            width={70}
+            height={70}
             data-ai-hint="medical logo"
             className="rounded-full"
           />
@@ -55,11 +55,19 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="p-4 text-center text-muted-foreground text-sm">
-        <p className="mb-2 text-foreground/80">
-          Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso. Servicio de urología (Hospital de San Juan)
+      <footer className="p-4 text-center text-muted-foreground text-sm flex flex-col items-center">
+        <p className="mb-4 max-w-lg text-foreground/80">
+          Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
         </p>
-        <p>Desarrollado por Daniel Santos Olmo Montoya</p>
+        <Image
+            src="/creditoshospital.jpeg"
+            alt="Créditos del hospital"
+            width={70}
+            height={70}
+            data-ai-hint="hospital logo"
+            className="rounded-full"
+          />
+        <p className="mt-4">Desarrollado por Daniel Santos Olmo Montoya</p>
       </footer>
 
       <RiskResultDialog
