@@ -54,7 +54,7 @@ export default function Home() {
         <div className="w-full max-w-md px-4">
           <RiskForm onCalculate={handleCalculateRisk} />
         </div>
-        <div className="text-center max-w-2xl mb-8 px-4 mt-8">
+        <div className="text-center max-w-2xl px-4 mt-8">
             <p className="text-muted-foreground">
             Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
             </p>
