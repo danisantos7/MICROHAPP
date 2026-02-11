@@ -34,6 +34,11 @@ export default function Home() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
+        <div className="text-center max-w-2xl mb-8">
+            <p className="text-muted-foreground">
+                Calculadora para la estratificación de riesgo de tumor urotelial (vejiga y tracto urinario superior) en pacientes con microhematuria asintomática.
+            </p>
+        </div>
         <div className="w-full max-w-md">
           <RiskForm onCalculate={handleCalculateRisk} />
         </div>
