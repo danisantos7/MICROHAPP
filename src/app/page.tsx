@@ -45,8 +45,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-1 flex flex-col items-center justify-start py-10 md:justify-center md:p-8">
-        <div className="text-center max-w-2xl mb-8 px-4">
+      <main className="flex-1 flex flex-col items-center justify-start pt-0 pb-0 md:justify-center md:p-8">       
+        <div className="text-center max-w-2xl mb-4 px-4">
             <p className="text-muted-foreground">
                 Calculadora para la estratificación de riesgo de tumor urotelial (vejiga y tracto urinario superior) en pacientes con microhematuria asintomática.
             </p>
@@ -54,7 +54,7 @@ export default function Home() {
         <div className="w-full max-w-md px-4">
           <RiskForm onCalculate={handleCalculateRisk} />
         </div>
-        <div className="text-center text-[13px] max-w-2xl px-4 mt-8">
+        <div className="text-center text-[13px] max-w-2xl px-4 mt-6 mb-2">
             <p className="text-muted-foreground">
             Esta calculadora tiene fines informativos y no sustituye el juicio clínico. Los creadores no se hacen responsables del manejo de los pacientes ni de las decisiones clínicas derivadas de su uso.
             </p>
