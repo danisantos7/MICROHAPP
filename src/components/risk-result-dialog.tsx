@@ -32,7 +32,7 @@ export default function RiskResultDialog({
   let iconColor = "text-primary";
   let titleColor = "text-foreground";
 
-  if (riskScore > 7) {
+  if (riskScore >= 7) {
     title = "Riesgo Alto Detectado";
     description =
       "Su perfil de riesgo general es alto. Se recomienda completar estudio con cistoscopia y uroTC.";
@@ -61,7 +61,7 @@ export default function RiskResultDialog({
           <div className="text-center py-2">
             <p className="text-sm text-muted-foreground">Probabilidad de Tumor</p>
             <p className={cn("text-4xl font-bold", iconColor)}>
-            {riskScore !== null ? `${riskScore.toFixed(0)}%` : "-- %"}            </p>
+            {riskScore !== null ? `${riskScore.toFixed(2)}%` : "-- %"}            </p>
           </div>
           <AlertDialogDescription className="text-center pt-2 text-base">
             {description}

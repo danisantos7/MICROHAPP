@@ -69,7 +69,8 @@ export default function Home() {
             data-ai-hint="hospital logo"
             className="rounded-full"
           />
-        <p className="mt-4">Desarrollado por Daniel Santos Olmo Montoya</p>
+        <p className="mt-4">Modelo clínico: Dra. Milagros Muñoz Montoya. Servicio de urología. Hospital universitario San Juan de Alicante</p>
+        <p className="mt-4">Desarrollo de software: Daniel Santos Olmo Montoya</p>
       </footer>
 
       <RiskResultDialog
