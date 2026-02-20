@@ -74,7 +74,7 @@ export default function RiskForm({ onCalculate }: RiskFormProps) {
           Calculadora de riesgo
         </CardTitle>
         <CardDescription className="text-center">
-          Ingrese sus datos para evaluar su perfil de riesgo.
+          Ingrese los datos para evaluar el perfil de riesgo.
         </CardDescription>
       </CardHeader>
       <CardContent>
