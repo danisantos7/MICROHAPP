@@ -5,6 +5,11 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'MICROHAPP',
   description: 'Calculadora de Riesgo de tumor',
+  applicationName: 'microHApp',
+  openGraph: {                  
+    siteName: 'microHApp',
+    type: 'website',
+  },
   icons: {
     icon: '/icon.png',            
     shortcut: '/icon.png',            
